@@ -1,0 +1,42 @@
+---
+// library imports
+import { Icon } from 'astro-icon';
+
+// component imports
+import Link from "./Link.astro";
+
+
+
+const navData = [
+    {
+      name: "Home",
+      path: "/home/",
+    },
+    {
+        name: "CheckIn",
+        path: "/check-in/",
+    },
+    {
+        name: "Profile",
+        path: "/profile/",
+    },
+  ]
+---
+
+<nav aria-label="Primary">
+  <div class="tabbar">
+    <ul>
+      {
+        navData.map((item) => (
+          <Link
+            text={item.name}
+            href={item.path}
+            style="primary"
+            isFilled={false}
+            data-navLink
+          />
+        ))
+      }
+    </ul>
+  </div>
+</nav>
