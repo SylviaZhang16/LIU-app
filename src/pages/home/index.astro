@@ -2,20 +2,25 @@
 
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
+import PostCard from "../../components/PostCard.astro";
 
+const allPosts = await Astro.glob("./posts/*.md");
 ---
 
 <MainLayout title="Home" description="Liu App description">
-  <ul>
-    <li>
-      <a href="./posts/post-1/" >Post 1</a>
-    </li>
-    <li>
-      <a href="./posts/post-2/" >Post 2</a>
-    </li>
-    <li>
-      <a href="./posts/post-3/" >Post 3</a>
-    </li>
-  </ul>
+  <section class="container" aria-label="New Blog Posts">
+    <input value="Search"/> 
+    <div class="post-container">
+      {
+        allPosts.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h2"
+          />
+        ))
+      }
+    </div>
+  </section>
 
 </MainLayout>
