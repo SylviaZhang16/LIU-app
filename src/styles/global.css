@@ -345,6 +345,7 @@ button {
 }
 
 .navbar {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,6 +356,8 @@ button {
 }
 
 .tabbar {
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +365,8 @@ button {
   max-width: 1500px;
   margin-inline: auto;
   padding-inline: var(--space-md);
-  height: 4rem;
+  height: 80px;
+  background-color: hsl(var(--muted));
 }
 
 .logomark {
@@ -585,7 +589,7 @@ header {
 
 
 .hero-image {
-  box-shadow: var(--shadow-md);
+  /* box-shadow: var(--shadow-md); */
   object-fit: cover;
 
   @media (--lg) {

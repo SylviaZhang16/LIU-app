@@ -7,13 +7,12 @@ import TabBar from "../components/TabBar.astro"
 
 //style import
 import "../styles/global.css"
-import TabBar from "../components/TabBar.astro"
 
 interface Props{
     title: string;
     description: string
 }
-const { title = "Liu App post", description = "default post decription"} = Astro.props
+const { title = "Liu App", description = "default post decription"} = Astro.props
 ---
 
 <html lang="en">
@@ -21,7 +20,8 @@ const { title = "Liu App post", description = "default post decription"} = Astro
 	<body>
         <Nav />
 		<slot />
-        <TabBar />
+       
 	</body>
+    <TabBar />
     <!-- <Footer /> -->
 </html>
