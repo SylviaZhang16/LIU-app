@@ -1,0 +1,36 @@
+---
+// library imports
+import { Image } from "astro:assets";
+
+// component imports
+import Link from "./Link.astro";
+
+// utils imports
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter, url, tagType } = Astro.props;
+
+const Tag = tagType;
+
+const { title, date, author, image, description, category } = frontmatter;
+---
+
+<article class="card">
+  <a href={url} aria-hidden="true" tabindex="-1">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width="400"
+      height="250"
+      format="webp"
+      quality={80}
+    />
+  </a>
+  <div class="content">
+    <div>
+        <h1 class="h3">{title}</h1>
+
+    </div>
+    <Link href={url} text="View details" style="secondary"/>
+  </div>
+</article>
