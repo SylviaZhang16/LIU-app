@@ -1,6 +1,6 @@
 ---
 // library imports
-import { Icon } from 'astro-icon';
+// import { Icon } from 'astro-icon';
 
 // component imports
 import Link from "./Link.astro";
@@ -23,7 +23,7 @@ const navData = [
   ]
 ---
 
-<nav aria-label="Primary">
+<!-- <nav aria-label="Primary">
   <div class="tabbar">
     <ul>
       {
@@ -39,7 +39,27 @@ const navData = [
       }
     </ul>
   </div>
-</nav>
+</nav> -->
+
+<div class="btm-nav bg-white " >
+  <button onclick="window.location.href='/home/'" class="btn-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="currentColor" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"/></svg>
+  </button>
+  <button onclick="window.location.href='/check-in/'" class="btn-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M2 19V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 7h20M9 14h3m3 0h-3m0 0v-3m0 3v3"/></g></svg>
+  </button>
+  <button onclick="window.location.href='/profile/'" class="btn-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0Zm-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z"/><path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1ZM3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0 1 12.065 14a8.984 8.984 0 0 1 7.092 3.458A9 9 0 1 0 3 12Zm9 9a8.963 8.963 0 0 1-5.672-2.012A6.992 6.992 0 0 1 12.065 16a6.991 6.991 0 0 1 5.689 2.92A8.964 8.964 0 0 1 12 21Z"/></g></svg>
+  </button>
+</div>
+
+
+    <!-- <Link
+            href={navData[0].path}
+            style="primary"
+            isFilled={false}
+            data-navLink
+          /> -->
 
 <script>
    import "../js/tab.js";

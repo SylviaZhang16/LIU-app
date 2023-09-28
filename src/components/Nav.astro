@@ -5,6 +5,7 @@ import { Icon } from 'astro-icon';
 // component imports
 import Link from "./Link.astro";
 
+import "../input.css"
 
 
 const navData = [
@@ -23,16 +24,71 @@ const navData = [
   ]
 ---
 
-<nav aria-label="Primary">
+<!-- <nav aria-label="Primary">
   <div class="navbar">
     <a href="/" class="logomark" aria-label="Go home">
-      <!-- <Icon name="logomark" width="60" /> -->
+      <Icon name="logomark" width="60" />
       <img src="/logomark.jpeg" alt="Liu Foundation logo"  height="60"/>
     </a>
     <h1> Home </h1>
   </div>
-</nav>
+</nav> -->
 
-<!-- <script>
-   import "../js/nav.js";
-</script> -->
+
+<div class="navbar bg-primary">
+  <div class="flex-1">
+    <a class="normal-case text-xl text-white">Home</a>
+  </div>
+  <div class="flex-none">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar" onclick="menu.showModal()">
+        <div class="w-10 rounded-full">
+          <img src="../../public/images/1.png" />
+        </div>
+      </label>
+     <dialog id="menu" class="modal">
+      <div tabindex="0" class="menu menu-sm mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-full h-full">
+        <form method="dialog">
+          <button class="btn btn-lg btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <div class="m-4 flex gap-5 text-md align-center">
+          <ul>
+          <li>
+            <a>
+              Profile
+            </a>
+          </li>
+          <li><a>Settings</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+        </div>
+       </div>
+     </dialog>
+  </div>
+</div>
+
+
+<!-- <div class="navbar bg-primary">
+  <div class="flex-1">
+    <a class="normal-case text-xl text-white">Home</a>
+  </div>
+  <div class="flex-none">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img src="../../public/images/1.png" />
+        </div>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li>
+          <a class="justify-between">
+            Profile
+            <span class="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+        <li><a>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+

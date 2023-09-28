@@ -10,10 +10,16 @@ const { title, description, date, category, author, image } = frontmatter;
 ---
 
 <MainLayout {title} {description}>
+  <body class="flex flex-col items-center h-screen h-[100svh]">
+    <div class="w-full max-w-3xl flex-grow">
+
   <PostHeader {title} {description} {date} {category} {image} {author} />
-  <div>
-    <div class="content">
+
+    <div class="p-4 pb-10">
       <slot />
     </div>
   </div>
+  </div>
 </MainLayout>
+
+
